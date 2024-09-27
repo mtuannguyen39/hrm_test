@@ -1,0 +1,35 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-header {
+  text-align: center;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.text-content {
+  color: #000;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.content-list {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-list:hover {
+  background-color: #ececec;
+}
