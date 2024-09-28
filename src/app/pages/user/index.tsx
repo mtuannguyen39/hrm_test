@@ -9,34 +9,33 @@ type UserProfileType = {
 }
 
 
-    const UserProfile = () => {
-        const [user, setUser] = useState<UserProfileType | null>(null);
+const UserProfile = () => {
+  const [user, setUser] = useState<UserProfileType | null>(null);
   
-        useEffect(() => {
-            const fetchUserProfile = async () => {
-                const res = await fetch('/pages/api/user');
-                const data = await res.json();
-                console.log(data)
-                setUser(data);
-            };
-            fetchUserProfile();
-        }, []);
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+        const res = await fetch('/pages/api/user');
+        const data = await res.json();
+        console.log(data)
+        setUser(data);
+    };
+    fetchUserProfile();
+  }, []);
 
-        console.log("User state:", user);
+  console.log("User state:", user);
 
-        return (
-          <div className={styles.container}>
-            <h1 className={styles.text}>User Profile</h1>
-            {user ? (
-              <>
-                <p key={user.id} className={styles.textContent}>Name: {user.name || "No Name Available"}</p>
-                <p key={user.id} className={styles.textContent}>Email: {user.email || "No Email Available"}</p>
-              </>
-            ) : (
-              <div>Loading...</div>
-            )}
-          </div>
-        );
+  return (
+    <div className="text-center bg-gray p-5 rounded-2xl shadow-xl ">
+      <h1 className="text-2xl text-black">User Profile</h1>
+      {user ? (
+        <>
+          <p className="text-l text-black">Name: {user.name || "No Name Available"}</p>
+          <p className="text-l text-black">Email: {user.email || "No Email Available"}</p>
+        </>
+      ) : (
+        <div>Loading...</div>
+      )}
+    </div>
+  );
 };
-
 export default UserProfile;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../../styles/AdminDashboard.module.css';
+import DefaultLayout from '@/components/Layouts/DefaultLayout';
 
 type Employee = {
     id: string;
@@ -7,7 +8,7 @@ type Employee = {
     email: string;
 }
 
-const AdminDashboard = () => {
+const AdminDashboard: React.FC = () => {
     const[employees, setEmployees] = useState<Employee[]>([]);
 
     useEffect(() => {
@@ -20,12 +21,12 @@ const AdminDashboard = () => {
     }, []);
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.textHeader}>Admin DashBooard</h1>
-            <h2 className={styles.textContent}>Employee List</h2>
+        <div className="text-center bg-white p-5 rounded-2xl shadow-xl">
+            <h1 className="text-2xl text-black">Admin DashBooard</h1>
+            <h2 className="text-xl text-black">Employee List</h2>
             <ul className={styles.list}>
                 {employees.map((employee) => (
-                    <li key={employee.id} className={styles.contentList}> 
+                    <li key={employee.id} className="text-l text-black">
                         {employee.name} - {employee.email}
                     </li>
                 ))}
@@ -34,4 +35,4 @@ const AdminDashboard = () => {
     );
 };
 
-export default AdminDashboard
+export default AdminDashboard;

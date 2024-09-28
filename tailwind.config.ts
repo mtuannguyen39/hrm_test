@@ -14,6 +14,7 @@ const config: Config = {
       xsm: "425px",
       "3xl": "2000px",
       ...defaultTheme.screens,
+      "mx-height": "2000px",
     },
     extend: {
       colors: {
@@ -325,6 +326,7 @@ const config: Config = {
         line2: "line-revert 8s infinite linear",
         line3: "line 7s infinite linear",
       },
+    
     },
   },
   plugins: [],
