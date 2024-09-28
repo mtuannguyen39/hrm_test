@@ -6,30 +6,32 @@ This is a simple Human Resource Management System built using Next.js and TypeSc
 
 ## Setup
 
-1. Clone the repository.
-2. Install dependencies using:
+1. **Clone the repository.**
+2. **Install dependencies using**
     ``` bash
     npm install
 
-3. Run the development server
+3. **Run the development server**
+    ``` bash
+    cd hrm_test
     npm run dev
 
-4. Open http://localhost:3000 in your browser.
+4. **Open http://localhost:3000 in your browser.**
 
-FEATURES
+5. **FEATURES**
 - Admin Dashboard:
     - View a list of employees.
 - User Profile:
     - View personal profile information.
 
-PROS AND CONS
-Pros: 
+6. **PROS AND CONS**
+- Pros: 
     - Simple and scalable structure using Next.js.
     - TypeScript provides better type safety.
-Cons:
+- Cons:
     - More advanced feature such as authentication and database integration need to be implemented
 
-### 6. **Development Phases**
+### 7. **Development Phases**
 For your submission, decribe the following phases in your documentation:
 1. **Planning**: Decided on simple employee and user data, focusing on one feature per component (Admin and User).
 2. **Development**: Implemented Admin and User pages, created API routes, and ensured data fetching worked.
